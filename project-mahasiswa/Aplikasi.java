@@ -14,7 +14,15 @@ public class Aplikasi {
         int opsi = 5;
         do {
             showMenu();
-            opsi = scanner.nextInt();
+            try {
+                scanner = new Scanner(System.in);
+                opsi = scanner.nextInt();
+            } catch(InputMismatchException e) {
+                System.err.println("Input salah, tolong di cek mas/mba");
+                opsi = 0;
+            } catch(NoSuchElementException nsee) {
+
+            }
             prosesOpsi(opsi);
         } while(opsi != 5);
     }
@@ -28,6 +36,7 @@ public class Aplikasi {
                 showFormEditData();
                 break;
             case 3:
+                showDeleteData();
                 break;
             case 4:
                 service.showAllData();
@@ -36,6 +45,14 @@ public class Aplikasi {
                 System.out.println("Terima kasih telah menggunakan");
                 System.out.println("Aplikasi kami.");
         }
+    }
+
+    private static void showDeleteData() {
+        scanner = new Scanner(System.in);
+        System.out.println("\n--= Form Hapus Data =--");
+        System.out.print("NIM : ");
+        String nim = scanner.nextLine();
+        service.deleteData(nim);
     }
 
     private static void showFormEditData() {
