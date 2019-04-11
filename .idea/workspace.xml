@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="982d8c66-4b85-4744-a48c-e1864c5a9982" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/praktek-9-audio/util/MyPlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/praktek-9-audio/Aplikasi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/praktek-9-audio/ui/MainUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/praktek-9-audio/sample.au" beforeDir="false" afterPath="$PROJECT_DIR$/praktek-9-audio/audio/sample.au" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/praktek-9-audio/util/MyPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/praktek-9-audio/util/MyPlayer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,10 +17,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/praktek-8-img/Aplikasi.java">
+        <entry file="file://$PROJECT_DIR$/praktek-9-audio/util/MyPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-7">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            <state relative-caret-position="252">
+              <caret line="15" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#358#359#0" expanded="true" />
+                <element signature="e#378#379#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/praktek-9-audio/ui/MainUI.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="54" column="73" selection-start-line="54" selection-start-column="73" selection-end-line="54" selection-end-column="73" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -28,26 +43,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/praktek-7-gui/Aplikasi.java">
+        <entry file="file://$PROJECT_DIR$/praktek-9-audio/Aplikasi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+            <state relative-caret-position="68">
+              <caret line="4" column="34" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="34" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/praktek-9-audio/util/MyPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="79" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="79" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#358#359#0" expanded="true" />
-                <element signature="e#378#379#0" expanded="true" />
+                <element signature="e#67#68#0" expanded="true" />
+                <element signature="e#102#103#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -67,7 +69,9 @@
         <option value="$PROJECT_DIR$/project-mahasiswa/Aplikasi.java" />
         <option value="$PROJECT_DIR$/praktek-8-img/Aplikasi.java" />
         <option value="$PROJECT_DIR$/praktek-7-gui/Aplikasi.java" />
+        <option value="$PROJECT_DIR$/praktek-9-audio/Aplikasi.java" />
         <option value="$PROJECT_DIR$/praktek-9-audio/util/MyPlayer.java" />
+        <option value="$PROJECT_DIR$/praktek-9-audio/ui/MainUI.java" />
       </list>
     </option>
   </component>
@@ -104,6 +108,18 @@
               <item name="oop-c" type="b2602c69:ProjectViewProjectNode" />
               <item name="oop-c" type="462c0819:PsiDirectoryNode" />
               <item name="praktek-9-audio" type="462c0819:PsiDirectoryNode" />
+              <item name="audio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oop-c" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oop-c" type="462c0819:PsiDirectoryNode" />
+              <item name="praktek-9-audio" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="oop-c" type="b2602c69:ProjectViewProjectNode" />
+              <item name="oop-c" type="462c0819:PsiDirectoryNode" />
+              <item name="praktek-9-audio" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -115,7 +131,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554974778143" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554978546180" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -174,8 +190,8 @@
     <frame x="1440" y="23" width="1024" height="745" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1802444" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992343" visible="true" weight="0.1802444" />
+      <window_info id="Structure" order="1" sideWeight="0.5007657" side_tool="true" visible="true" weight="0.1802444" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="DB Browser" order="4" />
@@ -286,14 +302,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/praktek-9-audio/Aplikasi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="34" />
+          <folding>
+            <element signature="e#67#68#0" expanded="true" />
+            <element signature="e#102#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/praktek-9-audio/util/MyPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="79" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="79" />
+        <state relative-caret-position="252">
+          <caret line="15" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#358#359#0" expanded="true" />
             <element signature="e#378#379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/praktek-9-audio/ui/MainUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="54" column="73" selection-start-line="54" selection-start-column="73" selection-end-line="54" selection-end-column="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
