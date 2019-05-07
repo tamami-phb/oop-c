@@ -12,7 +12,7 @@ public class Koneksi {
     }
 
     public void openConnection() throws SQLException, SQLTimeoutException {
-        connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/mahasiswa?serverTimezone=UTC",
+        connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/mahasiswa",
                 "root", "rahasia");
         statement = connection.createStatement();
     }
@@ -22,6 +22,13 @@ public class Koneksi {
         ResultSet result;
         openConnection();
         result = statement.executeQuery(sql);
+        closeConnection();
+        return result;
+    }
+
+    public int eksekusiUpdate(String sql) throws SQLException, SQLTimeoutException {
+        openConnection();
+        int result = statement.executeUpdate(sql);
         closeConnection();
         return result;
     }
