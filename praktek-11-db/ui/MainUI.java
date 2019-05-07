@@ -11,6 +11,7 @@ import java.sql.*;
 public class MainUI extends JFrame {
 
     public static Koneksi koneksi;
+    public static TambahUI tambahUI;
 
     private JTable table;
     private JButton btnTambah;
@@ -56,6 +57,8 @@ public class MainUI extends JFrame {
     private void initUI() {
         setTitle("Aplikasi Mahasiswa");
 
+        tambahUI = new TambahUI();
+
         contentPane = getContentPane();
 
         columnNames = new Vector();
@@ -81,6 +84,17 @@ public class MainUI extends JFrame {
         pack();
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        btnTambah.addActionListener(new BtnTambahClick());
+    }
+
+
+    // ------ events
+
+    private class BtnTambahClick implements ActionListener {
+        public void actionPerformed(ActionEvent evt) {
+            tambahUI.setVisible(true);
+        }
     }
 
 }
