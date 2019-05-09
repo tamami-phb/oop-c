@@ -12,6 +12,7 @@ public class MainUI extends JFrame {
 
     public static Koneksi koneksi;
     public static TambahUI tambahUI;
+    public static UbahUI ubahUI;
 
     private JTable table;
     private JButton btnTambah;
@@ -63,6 +64,7 @@ public class MainUI extends JFrame {
         setTitle("Aplikasi Mahasiswa");
 
         tambahUI = new TambahUI(this);
+        ubahUI = new UbahUI(this);
 
         contentPane = getContentPane();
 
@@ -73,6 +75,7 @@ public class MainUI extends JFrame {
         data = new Vector();
         tableModel = new DefaultTableModel(data, columnNames);
         table = new JTable(tableModel);
+        table.setSelectionModel(new MySingleSelectionModel());
         scrollPane = new JScrollPane(table);
         contentPane.add(scrollPane, BorderLayout.CENTER);
 
@@ -91,6 +94,8 @@ public class MainUI extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         btnTambah.addActionListener(new BtnTambahClick());
+        btnUbah.addActionListener(new BtnUbahClick());
+        btnHapus.addActionListener(new BtnHapusClick());
     }
 
 
@@ -98,7 +103,44 @@ public class MainUI extends JFrame {
 
     private class BtnTambahClick implements ActionListener {
         public void actionPerformed(ActionEvent evt) {
+            tambahUI.clearForm();
             tambahUI.setVisible(true);
+        }
+    }
+
+    private class BtnUbahClick implements ActionListener {
+        public void actionPerformed(ActionEvent evt) {
+            if(table.getSelectedRow() != -1) {
+                ubahUI.tampilkan(
+                        "" + table.getValueAt(table.getSelectedRow(), 0),
+                        table.getValueAt(table.getSelectedRow(), 1).toString(),
+                        (String) table.getValueAt(table.getSelectedRow(), 2));
+            } else {
+                JOptionPane.showMessageDialog(null,
+                        "Pilih dulu data yang akan diubah di tabel");
+            }
+        }
+    }
+
+    private class BtnHapusClick implements ActionListener {
+        public void actionPerformed(ActionEvent evt) {
+            if(table.getSelectedRow() != -1) {
+                String nim = table.getValueAt(table.getSelectedRow(), 0).toString();
+                String query = "delete from mahasiswa " +
+                        "where nim='" + nim + "'";
+                try {
+                    koneksi.eksekusiUpdate(query);
+                    JOptionPane.showMessageDialog(null,
+                            "Data dengan nim " + nim + " telah dihapus.");
+                    refreshTable();
+                } catch(SQLException e) {
+                    JOptionPane.showMessageDialog(null,
+                            "Data gagal dihapus");
+                }
+            } else {
+                JOptionPane.showMessageDialog(null,
+                        "Pilih dahulu data yang akan dihapus.");
+            }
         }
     }
 
