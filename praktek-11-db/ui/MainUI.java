@@ -30,6 +30,7 @@ public class MainUI extends JFrame {
         } catch(SQLException e) {
             JOptionPane.showMessageDialog(this,
                     "Gagal koneksi");
+            e.printStackTrace();
         }
         initUI();
         initData();
@@ -54,10 +55,14 @@ public class MainUI extends JFrame {
         }
     }
 
+    public void refreshTable() {
+        initData();
+    }
+
     private void initUI() {
         setTitle("Aplikasi Mahasiswa");
 
-        tambahUI = new TambahUI();
+        tambahUI = new TambahUI(this);
 
         contentPane = getContentPane();
 
